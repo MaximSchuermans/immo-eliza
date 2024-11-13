@@ -1,4 +1,3 @@
-
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
 from threading import Thread
@@ -6,49 +5,76 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Chrome()
+def web_driver():
+    driver = webdriver.Chrome()
+    return driver
 
-# Store all urls of apartment in a list
-url_apartments_list = []
+def accept_cookies(driver):
+    """Accept cookies"""
+    try:
+        cssSelectorForHost1 = "#usercentrics-root"
+        shadow_host = driver.find_element(By.ID, 'usercentrics-root')
+        shadow_root = shadow_host.shadow_root
+        cookie_button = shadow_root.find_element(By.CSS_SELECTOR, "button[data-testid='uc-accept-all-button']")
+        cookie_button.click()
+        time.sleep(2)  # Wait for page
+    except:
+        pass
 
-# Complete url with number of each page
-root_url = 'https://www.immoweb.be/en/search/apartment/for-sale'
-for n in range(1,5): ########Change it for 334 when solved   
-    endpoint = f"?countries=BE&page={n}&orderBy=relevance"
-    url = root_url + endpoint 
-    driver.get(url)
-
-    # Wait for page 
-    time.sleep(2)
-
-    # Cookie botton
-    if n == 1:
-        try:        
-            cssSelectorForHost1 = "#usercentrics-root"
-            shadow_host = driver.find_element(By.ID, 'usercentrics-root')
-            shadow_root = shadow_host.shadow_root
-            cookie_button = shadow_root.find_element(By.CSS_SELECTOR, "button[data-testid='uc-accept-all-button']")
-            cookie_button.click()
-            time.sleep(2)
-        except:
-            pass
-
-    # In each page go throught each apartment listed and get url
+def get_aparment_urls(driver, url):
+    """Get url"""
     urls_from_each_page = []
-
+    driver.get(url)
+    
+    # Wait for apartments to load
     WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'card__title-link')))
-    apartments = driver.find_elements(By.CLASS_NAME, 'card__title-link')
 
-    #apartments = driver.find_elements(By.CLASS_NAME, 'card__title-link')
+    apartments = driver.find_elements(By.CLASS_NAME, 'card__title-link')
     
     for apartment in apartments:        
-        apartment_url = apartment.get_attribute('href')      
+        apartment_url = apartment.get_attribute('href')
         urls_from_each_page.append(apartment_url)
+    
+    return urls_from_each_page
 
-    url_apartments_list.append(urls_from_each_page)
+def collect_urls(driver, root_url, max_pages=334):
+    """Get apartments urls"""
 
-# Store all urls in a document
-with open('houses_apartments_urls.csv', 'w') as file:
-    for page_apartments in url_apartments_list:  
-        for url in page_apartments:
+    # Store all urls of apartment in a list
+    url_apartments_list = []
+    
+    for n in range(1,334):
+        endpoint = f"?countries=BE&page={n}&orderBy=relevance"
+        url = root_url + endpoint
+        
+        # Cookie botton
+        if n == 1:
+            accept_cookies(driver)
+        
+        # Get URLs from the page
+        urls_from_each_page = get_aparment_urls(driver, url)
+        url_apartments_list.extend(urls_from_each_page)
+        
+        print(f"Page {n}: Collected")
+    
+    return url_apartments_list
+
+def save_urls_to_csv(url_apartments_list, filename='houses_apartments_urls.csv'):
+    with open(filename, 'w') as file:
+        for url in url_apartments_list:
             file.write(url+'\n')
+
+def main():
+    driver = web_driver()
+    root_url = ['https://www.immoweb.be/en/search/apartment/for-sale', 'https://www.immoweb.be/en/search/house/for-sale']
+    
+    try:
+        url_apartments_list = collect_urls(driver, root_url)
+        save_urls_to_csv(url_apartments_list)
+    finally:
+        driver.quit()
+    
+
+
+if __name__ == "__main__":
+    main()
