@@ -43,7 +43,7 @@ def collect_urls(driver, root_url, max_pages=334):
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,334):
+    for n in range(1,15):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         
@@ -59,22 +59,33 @@ def collect_urls(driver, root_url, max_pages=334):
     
     return url_apartments_list
 
-def save_urls_to_csv(url_apartments_list, filename='houses_apartments_urls.csv'):
-    with open(filename, 'w') as file:
-        for url in url_apartments_list:
-            file.write(url+'\n')
+#def save_urls_to_csv(url_apartments_list, filename='houses_apartments_urls.csv'):
+#    with open(filename, 'w') as file:
+#        for url in url_apartments_list:
+#            file.write(url+'\n')
 
 def main():
+    links = []
     driver = web_driver()
-    root_url = ['https://www.immoweb.be/en/search/apartment/for-sale', 'https://www.immoweb.be/en/search/house/for-sale']
+    root_url = 'https://www.immoweb.be/en/search/apartment/for-sale'
     
     try:
         url_apartments_list = collect_urls(driver, root_url)
-        save_urls_to_csv(url_apartments_list)
+        links.append(url_apartments_list)
+        
     finally:
         driver.quit()
     
+    driver = web_driver()
+    root_url = 'https://www.immoweb.be/en/search/house/for-sale'
+    
+    try:
+        url_apartments_list = collect_urls(driver, root_url)
+        links.append(url_apartments_list)
+    finally:
+        driver.quit()
 
+    return links
 
 if __name__ == "__main__":
     main()
