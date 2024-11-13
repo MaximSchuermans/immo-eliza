@@ -37,13 +37,13 @@ def get_aparment_urls(driver, url):
     
     return urls_from_each_page
 
-def collect_urls(driver, root_url, max_pages=334):
+def collect_urls(driver, root_url):
     """Get apartments urls"""
 
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,15):
+    for n in range(1,3):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         
@@ -58,11 +58,6 @@ def collect_urls(driver, root_url, max_pages=334):
         print(f"Page {n}: Collected")
     
     return url_apartments_list
-
-#def save_urls_to_csv(url_apartments_list, filename='houses_apartments_urls.csv'):
-#    with open(filename, 'w') as file:
-#        for url in url_apartments_list:
-#            file.write(url+'\n')
 
 def main():
     links = []
@@ -85,7 +80,11 @@ def main():
     finally:
         driver.quit()
 
-    return links
+    flat_links = [url for sublist in links for url in sublist]
+
+    with open('properties_urls.txt', 'w') as file:
+        for url in flat_links:
+            file.write(url + '\n')
 
 if __name__ == "__main__":
     main()
