@@ -76,8 +76,6 @@ def extracted_data(url, json_data):
     extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")
     extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
     extracted_data["Disabled_Access"] = get_value(json_data, "property", "hasDisabledAccess") 
-    extracted_data["Lift"] = get_value(json_data, "property", "hasLift") 
-    # extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "land", "surface")
 
     return extracted_data 
 
@@ -96,7 +94,7 @@ def extracted_mutiple_data(urls):
                 property_data = extracted_data(url, json_data)
                 all_data.append(property_data)
             else:
-                print(f"No data for {url}")
+                pass
     
     return all_data
 
@@ -107,19 +105,28 @@ def create_df(all_data):
 
 # Call the function to test
 urls = [
+    "https://www.immoweb.be/en/classified/house/for-sale/ans/4430/20305771",
+    "https://www.immoweb.be/en/classified/house/for-sale/ans/4430/20305771",
     "https://www.immoweb.be/en/classified/apartment/for-sale/ixelles/1050/20313791",
     "https://www.immoweb.be/en/classified/apartment/for-sale/wommelgem/2160/20313380",
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/anderlecht/1070/20313048',
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/gent/9000/20314083',
-    'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/mons/7000/20314330',
-    'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/saint-symphorien/7030/20314332',
-    'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/knokke/8300/20312233',
     'https://www.immoweb.be/en/classified/apartment/for-sale/boom/2850/20310616',
     "https://www.immoweb.be/en/classified/apartment/for-sale/anderlecht/1070/20313783", 
     "https://www.immoweb.be/en/classified/bungalow/for-sale/zelzate/9060/20309509", 
-    "https://www.immoweb.be/en/classified/exceptional-property/for-sale/sint-katelijne-waver/2860/20309293"
+    "https://www.immoweb.be/en/classified/exceptional-property/for-sale/sint-katelijne-waver/2860/20309293", 
+    "https://www.immoweb.be/en/classified/apartment/for-sale/knocke-heyst/8301/20207350",
+    "https://www.immoweb.be/en/classified/ground-floor/for-sale/spa/4900/20181510",
+    "https://www.immoweb.be/en/classified/apartment/for-sale/cadzand/4506%20JH/20118396",
+    "https://www.immoweb.be/en/classified/flat-studio/for-sale/de-haan/8420/20255430",
+    "https://www.immoweb.be/en/classified/house/for-sale/verviers/4800/20128649",
+    "https://www.immoweb.be/en/classified/house/for-sale/waimes/4950/20281071",
+    "https://www.immoweb.be/en/classified/house/for-sale/flemalle/4400/20316175",
+    "https://www.immoweb.be/en/classified/house/for-sale/flemalle/4400/20316175",
+    "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/pittem/8740/20308501",
+    "https://www.immoweb.be/en/classified/duplex/for-sale/woluwe-saint-lambert/1200/20280691"
+    
 ]
-
 
 property_data = extracted_mutiple_data(urls)
 data_properties_df = create_df(property_data)
