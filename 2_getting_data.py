@@ -67,9 +67,12 @@ def extracted_mutiple_data(urls):
     all_data = []
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = [executor.submit(get_script, url) for url in urls]
+        futures = []  
+        for url in urls:
+            future = executor.submit(get_script, url)  
+            futures.append(future) 
 
-        # Process each future as it completes
+
         for future, url in zip(futures, urls):
             json_data = future.result()
             if json_data:
@@ -77,39 +80,36 @@ def extracted_mutiple_data(urls):
                 all_data.append(property_data)
             else:
                 print(f"No data retrieved for {url}")
-
+    
     return all_data
 
-def get_dataframe(all_data):
-    data_properties = pd.DataFrame.from_records(all_data)
-
-    with open("classified_extracted_data.json", "w", encoding="utf-8") as file:
-        json.dump(data_properties, file, ensure_ascii=False, indent=4)
-        
-
-def get_dataframe(all_data):
-    # Convert the list of dictionaries into a pandas DataFrame
+def create_df(all_data):
     data_properties = pd.DataFrame(all_data)
+    data_properties.to_csv("properties_data.csv", index=False, encoding="utf-8")
 
-    # Save the DataFrame to a JSON file
-    with open("classified_extracted_data.json", "w", encoding="utf-8") as file:
-        json.dump(data_properties.to_dict(orient="records"), file, ensure_ascii=False, indent=4)
-    
-    return data_properties
+
+
 
 
 
 
 
 # Call the function to test
-
 urls = [
     "https://www.immoweb.be/en/classified/apartment/for-sale/ixelles/1050/20313791",
     "https://www.immoweb.be/en/classified/apartment/for-sale/wommelgem/2160/20313380",
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/anderlecht/1070/20313048',
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/gent/9000/20314083',
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/mons/7000/20314330',
+    'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/saint-symphorien/7030/20314332',
+    'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/knokke/8300/20312233',
+    'https://www.immoweb.be/en/classified/apartment/for-sale/boom/2850/20310616',
+    "https://www.immoweb.be/en/classified/apartment/for-sale/anderlecht/1070/20313783"
 ]
 
+
+
+
 property_data = extracted_mutiple_data(urls)
-print(property_data)
+data_properties_df = create_df(property_data)
+print(data_properties_df)

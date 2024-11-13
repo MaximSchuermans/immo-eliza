@@ -1,0 +1,10 @@
+Price,Type_of_Sale,Locality,Type_of_Property,Subtype_of_Property,Number_of_Rooms,Living_Area,Fully_Equipped_Kitchen,Furnished,Open_Fire,Terrace,Number_of_Facades,Swimming_Pool,State_of_the_Building
+695000.0,False,IXELLES,APARTMENT,APARTMENT,2.0,150.0,False,,,True,2.0,False,JUST_RENOVATED
+249000.0,False,WOMMELGEM,APARTMENT,APARTMENT,3.0,99.0,False,,,True,,,GOOD
+,False,Anderlecht,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,,,,,
+,False,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,,,,,
+,False,MONS,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,,,,,
+,False,SAINT-SYMPHORIEN,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,,,,,
+,False,Knokke,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,,,,,
+249900.0,False,BOOM,APARTMENT,APARTMENT,2.0,125.0,False,,,True,2.0,,AS_NEW
+315000.0,False,Anderlecht,APARTMENT,APARTMENT,3.0,120.0,True,,,True,2.0,False,AS_NEW
