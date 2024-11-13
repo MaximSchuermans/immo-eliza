@@ -37,31 +37,49 @@ def get_script(url):
 def get_value(data, *keys):
     for key in keys:
         if isinstance(data, dict) and key in data:
-            data = data[key]
+            value = data[key]
+            if value is True:
+                data = 1  # If value is True, set data to 1
+            elif value is False:
+                data = 0  # If value is False, set data to 2
+            else:
+                data = value  # If value is something else, set data to that value
         else:
-            return None  # If the key is not found, return None
+            return None  # If the key is missing, return None
     return data
 
 def extracted_data(url, json_data):
-    extracted_data = {
-                    "Price": get_value(json_data, "price", "mainValue"),
-                    "Type_of_Sale": get_value(json_data, "flags", "isPublicSale"),
-                    "Locality": get_value(json_data, "property", "location", "locality"),
-                    "Type_of_Property": get_value(json_data, "property", "type"),
-                    "Subtype_of_Property": get_value(json_data, "property", "subtype"),
-                    "Number_of_Rooms": get_value(json_data, "property", "bedroomCount"),
-                    "Living_Area": get_value(json_data, "property", "netHabitableSurface"),
-                    "Fully_Equipped_Kitchen": get_value(json_data, "property", "kitchen", "type") == "HYPER_EQUIPPED",
-                    "Furnished": get_value(json_data, "property", "isFurnished"),
-                    "Open_Fire": get_value(json_data, "property", "hasOpenFire"),
-                    "Terrace": get_value(json_data, "property", "hasTerrace"),
-                    "Number_of_Facades": get_value(json_data, "property", "building", "facadeCount"),
-                    "Swimming_Pool": get_value(json_data, "property", "hasSwimmingPool"),
-                    #"Surface_of_the_Land": get_value(json_data, "property", "land", "surface"),
-                    "State_of_the_Building": get_value(json_data, "property", "building", "condition"),
-                }
+    extracted_data = { }
 
-    return extracted_data
+    extracted_data["Price"] = get_value(json_data, "price", "mainValue")
+
+    try:
+        flags = get_value(json_data, "flags", {})
+
+        for key, value in flags.items(): # flags can have multilple values
+            if value == True:
+                extracted_data["Type_of_Sale"] = key
+                break  
+    except:
+        extracted_data["Type_of_Sale"] = None
+
+    extracted_data["Locality"] = get_value(json_data, "property", "location", "locality")
+    extracted_data["Type_of_Property"] = get_value(json_data, "property", "type")
+    extracted_data["Subtype_of_Property"] = get_value(json_data, "property", "subtype")
+    extracted_data["Number_of_Rooms"] = get_value(json_data, "property", "bedroomCount")
+    extracted_data["Living_Area"] = get_value(json_data, "property", "netHabitableSurface")
+    extracted_data["Fully_Equipped_Kitchen"] = get_value(json_data, "property", "kitchen", "type") == "HYPER_EQUIPPED"
+    extracted_data["Furnished"] = get_value(json_data, "property", "isFurnished")
+    extracted_data["Open_Fire"] = get_value(json_data, "property", "hasOpenFire")
+    extracted_data["Terrace"] = get_value(json_data, "property", "hasTerrace")
+    extracted_data["Number_of_Facades"] = get_value(json_data, "property", "building", "facadeCount"),
+    extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")
+    extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
+    extracted_data["Disabled_Access"] = get_value(json_data, "property", "hasDisabledAccess") 
+    extracted_data["Lift"] = get_value(json_data, "property", "hasLift") 
+    # extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "land", "surface")
+
+    return extracted_data 
 
 def extracted_mutiple_data(urls):
     all_data = []
@@ -72,26 +90,19 @@ def extracted_mutiple_data(urls):
             future = executor.submit(get_script, url)  
             futures.append(future) 
 
-
         for future, url in zip(futures, urls):
             json_data = future.result()
             if json_data:
                 property_data = extracted_data(url, json_data)
                 all_data.append(property_data)
             else:
-                print(f"No data retrieved for {url}")
+                print(f"No data for {url}")
     
     return all_data
 
 def create_df(all_data):
     data_properties = pd.DataFrame(all_data)
     data_properties.to_csv("properties_data.csv", index=False, encoding="utf-8")
-
-
-
-
-
-
 
 
 # Call the function to test
@@ -104,10 +115,10 @@ urls = [
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/saint-symphorien/7030/20314332',
     'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/knokke/8300/20312233',
     'https://www.immoweb.be/en/classified/apartment/for-sale/boom/2850/20310616',
-    "https://www.immoweb.be/en/classified/apartment/for-sale/anderlecht/1070/20313783"
+    "https://www.immoweb.be/en/classified/apartment/for-sale/anderlecht/1070/20313783", 
+    "https://www.immoweb.be/en/classified/bungalow/for-sale/zelzate/9060/20309509", 
+    "https://www.immoweb.be/en/classified/exceptional-property/for-sale/sint-katelijne-waver/2860/20309293"
 ]
-
-
 
 
 property_data = extracted_mutiple_data(urls)
