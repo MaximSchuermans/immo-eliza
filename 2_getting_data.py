@@ -1,7 +1,7 @@
 import requests 
 from bs4 import BeautifulSoup 
 #import re 
-#import json 
+import json 
 
 
 headers = {
@@ -20,3 +20,18 @@ soup = BeautifulSoup(response.content, 'html.parser')
 
 content = soup.find_all('script', attrs={"type" :"text/javascript"})
 
+for script in content:
+    script_text = script.string
+    #if 'window.classified' in script_text:
+      #  return script_text
+       # json_dic = json.loads(script_text)
+        #return script_text
+
+    print(script_text)
+#with open("javascript", "w") as file: 
+           # json.dump(script_text.string, file, ensure_ascii = False, indent = 4)
+
+
+
+json_str = script_text.strip()
+json_str = json_str.replace('window.classified = ', '')
