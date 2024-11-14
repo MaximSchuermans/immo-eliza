@@ -1,6 +1,7 @@
 from selenium import webdriver 
 from selenium.webdriver.common.by import By
-from threading import Thread
+import threading 
+from concurrent.futures import ThreadPoolExecutor
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -22,12 +23,14 @@ def accept_cookies(driver):
         pass
 
 def get_aparment_urls(driver, url):
-    """Get url"""
+    """Get property URLs from a single page"""
     urls_from_each_page = []
     driver.get(url)
     
-    # Wait for apartments to load
-    WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'card__title-link')))
+    try:
+        WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'card__title-link')))
+    except:
+        pass
 
     apartments = driver.find_elements(By.CLASS_NAME, 'card__title-link')
     
@@ -43,7 +46,7 @@ def collect_urls(driver, root_url):
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,334):
+    for n in range(1,10):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         
@@ -59,32 +62,36 @@ def collect_urls(driver, root_url):
     
     return url_apartments_list
 
+def collect_for_url(root_url):
+    """Helper function to collect URLs for a specific root URL"""
+    driver = web_driver()  # Create a new driver instance for each thread
+    all_links = collect_urls(driver, root_url)
+    driver.quit()  # Close the driver after the URL collection is done
+    return all_links
+
 def main():
-    links = []
-    driver = web_driver()
-    root_url = 'https://www.immoweb.be/en/search/apartment/for-sale'
-    
-    try:
-        url_apartments_list = collect_urls(driver, root_url)
-        links.append(url_apartments_list)
-        
-    finally:
-        driver.quit()
-    
-    driver = web_driver()
-    root_url = 'https://www.immoweb.be/en/search/house/for-sale'
-    
-    try:
-        url_apartments_list = collect_urls(driver, root_url)
-        links.append(url_apartments_list)
-    finally:
-        driver.quit()
+    """Main function to collect URLs for apartments and houses concurrently"""
+    start_time = time.time()  # Start timing URL collection
 
-    flat_links = [url for sublist in links for url in sublist]
-
-    with open('properties_cvs_urls.csv', 'w') as file:
-        for url in flat_links:
+    root_urls = [
+        'https://www.immoweb.be/en/search/apartment/for-sale',
+        'https://www.immoweb.be/en/search/house/for-sale'
+    ]
+    
+    # Use ThreadPoolExecutor to handle threads
+    all_links = []
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        results = executor.map(collect_for_url, root_urls)
+        for result in results:
+            all_links.extend(result)
+    
+    # Write URLs to CSV file
+    with open('properties_urls.csv', 'w') as file:
+        for url in all_links:
             file.write(url + '\n')
+
+    end_time = time.time()  # End timing URL collection
+    print(f"Time taken to collect URLs: {end_time - start_time:.2f} seconds")
 
 if __name__ == "__main__":
     main()
