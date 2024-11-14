@@ -1,6 +1,6 @@
 <h1 align="center"> Wikipedia Scraper </h1> <br>
 
-<p align="center"> [BeCode](https://becode.org/) learning project. </p>
+<p align="center"> ([BeCode](https://becode.org/) learning project.) </p>
 <p align="center"> AI & Data science Bootcamp </p>
 
 <details>
