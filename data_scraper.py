@@ -100,7 +100,7 @@ def create_df(all_data):
 
 def main ():
     urls = []  
-    with open('url_links', 'r') as file:
+    with open('url_list', 'r') as file:
         for line in file:
             line = line.strip()  
             if line: 
