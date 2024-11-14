@@ -1,3 +1,4 @@
+import url_scraper
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -16,7 +17,7 @@ def get_cookies(cookie_url):
 def extract_data(urls):
     # Create a session to reuse cookies and headers
     session = requests.Session()
-    session.headers.update(headers)
+    #session.headers.update(headers)
     
     # Get cookies only once and set them in the session
     cookies = get_cookies(cookie_url)
@@ -82,7 +83,6 @@ def extract_data(urls):
 
     # Start timing data extraction
     start_time = time.time()
-
     # Use ThreadPoolExecutor for concurrent URL processing
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(process_url, url) for url in urls]
