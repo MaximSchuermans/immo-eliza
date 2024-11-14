@@ -73,7 +73,7 @@ List of frameworks/libraries used in this project.
 
 
 ## **Contributors**
-The project was made by a group of Junior AI & Data Scientists (in alphabetical order):
+The project's contributors (in alphabetical order):
 * Manel Boubakeur - https://github.com/ManelBouba
 * Maxim Schuermans - https://github.com/MaximSchuermans
 * Jessica Rojas - https://github.com/jessrojasal
