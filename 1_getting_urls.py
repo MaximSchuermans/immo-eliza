@@ -43,7 +43,7 @@ def collect_urls(driver, root_url):
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,3):
+    for n in range(1,334):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         
@@ -82,7 +82,7 @@ def main():
 
     flat_links = [url for sublist in links for url in sublist]
 
-    with open('properties_urls.txt', 'w') as file:
+    with open('properties_cvs_urls.csv', 'w') as file:
         for url in flat_links:
             file.write(url + '\n')
 
