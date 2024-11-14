@@ -46,7 +46,7 @@ def collect_urls(driver, root_url):
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,334):
+    for n in range(1,10):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         

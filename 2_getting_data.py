@@ -5,7 +5,6 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
 
-
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
@@ -76,23 +75,26 @@ def extracted_data(url, json_data):
 
     return extracted_data 
 
-def extracted_mutiple_data(urls):
+
+def extract_data_for_url(url):
+    """Extract data for a single UR."""
+    json_data = get_script(url)
+    if json_data:
+        return extracted_data(url, json_data)
+    return None
+
+def extracted_multiple_data(urls):
+    """Extract data from multiple URLs concurrently."""
     all_data = []
 
     with ThreadPoolExecutor(max_workers=10) as executor:
-        futures = []  
-        for url in urls:
-            future = executor.submit(get_script, url)  
-            futures.append(future) 
+        results = executor.map(extract_data_for_url, urls)
 
-        for future, url in zip(futures, urls):
-            json_data = future.result()
-            if json_data:
-                property_data = extracted_data(url, json_data)
-                all_data.append(property_data)
-            else:
-                pass
-    
+        all_data = []
+        for data in results:
+            if data is not None:
+                all_data.append(data)
+
     return all_data
 
 def create_df(all_data):
@@ -100,31 +102,12 @@ def create_df(all_data):
     data_properties.to_csv("properties_data.csv", index=False, encoding="utf-8")
 
 
-# Call the function to test
-urls = ["https://www.immoweb.be/en/classified/house/for-sale/deurne/2100/20316323",
-        "https://www.immoweb.be/en/classified/house/for-sale/ans/4430/20305771",
-        "https://www.immoweb.be/en/classified/house/for-sale/ans/4430/20305771",
-        "https://www.immoweb.be/en/classified/apartment/for-sale/ixelles/1050/20313791",
-        "https://www.immoweb.be/en/classified/apartment/for-sale/wommelgem/2160/20313380",
-        'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/anderlecht/1070/20313048',
-        'https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/gent/9000/20314083',
-        'https://www.immoweb.be/en/classified/apartment/for-sale/boom/2850/20310616',
-        "https://www.immoweb.be/en/classified/apartment/for-sale/anderlecht/1070/20313783", 
-        "https://www.immoweb.be/en/classified/bungalow/for-sale/zelzate/9060/20309509", 
-        "https://www.immoweb.be/en/classified/exceptional-property/for-sale/sint-katelijne-waver/2860/20309293", 
-        "https://www.immoweb.be/en/classified/apartment/for-sale/knocke-heyst/8301/20207350",
-        "https://www.immoweb.be/en/classified/ground-floor/for-sale/spa/4900/20181510",
-        "https://www.immoweb.be/en/classified/apartment/for-sale/cadzand/4506%20JH/20118396",
-        "https://www.immoweb.be/en/classified/flat-studio/for-sale/de-haan/8420/20255430",
-        "https://www.immoweb.be/en/classified/house/for-sale/verviers/4800/20128649",
-        "https://www.immoweb.be/en/classified/house/for-sale/waimes/4950/20281071",
-        "https://www.immoweb.be/en/classified/house/for-sale/flemalle/4400/20316175",
-        "https://www.immoweb.be/en/classified/house/for-sale/flemalle/4400/20316175",
-        "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/pittem/8740/20308501",
-        "https://www.immoweb.be/en/classified/duplex/for-sale/woluwe-saint-lambert/1200/20280691"
-        
-        ]
+def main ():
+    df = pd.read_csv('properties_urls.csv', header=None)
 
-property_data = extracted_mutiple_data(urls)
-data_properties_df = create_df(property_data)
-print(data_properties_df)
+    # Extract URLs 
+    urls = df[0].tolist()  
+
+    property_data = extracted_mutiple_data(urls)
+    data_properties_df = create_df(property_data)
+    print(data_properties_df)
