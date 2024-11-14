@@ -49,7 +49,7 @@ The dataset is stored as a `csv` with the following columns:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+List of frameworks/libraries used in this project.
 
 * [![concurrent.futures](https://img.shields.io/badge/concurrent.futures-Module-green)](https://docs.python.org/3/library/concurrent.futures.html)
 * [![selenium](https://img.shields.io/badge/Selenium-Automation-yellow)](https://selenium.dev/)
@@ -74,9 +74,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## **Contributors**
 The project was made by a group of Junior AI & Data Scientists (in alphabetical order):
-Manel Boubakeur - https://github.com/ManelBouba
-Maxim Schuermans - https://github.com/MaximSchuermans
-Jessica Rojas - https://github.com/jessrojasal
+* Manel Boubakeur - https://github.com/ManelBouba
+* Maxim Schuermans - https://github.com/MaximSchuermans
+* Jessica Rojas - https://github.com/jessrojasal
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
