@@ -1,7 +1,8 @@
-<h1 align="center"> Wikipedia Scraper </h1> <br>
-
-<p align="center"> ([BeCode](https://becode.org/) learning project.) </p>
-<p align="center"> AI & Data science Bootcamp </p>
+<h1 align="center">Wikipedia Scraper</h1> <br>
+<p align="center">
+  <a href="https://becode.org/" target="_blank">BeCode</a> learning project.
+</p>
+<p align="center">AI & Data Science Bootcamp</p>
 
 <details>
   <summary>Table of Contents</summary>
