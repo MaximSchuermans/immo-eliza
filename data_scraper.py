@@ -5,6 +5,7 @@ from requests import Session
 import json 
 from concurrent.futures import ThreadPoolExecutor
 import pandas as pd
+from tqdm import tqdm
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -82,15 +83,11 @@ def extract_data_for_url(url):
 def extracted_multiple_data(urls):
     """Extract data from multiple URLs concurrently."""
     all_data = []
-
     with ThreadPoolExecutor(max_workers=10) as executor:
-        results = executor.map(extract_data_for_url, urls)
-
-        all_data = []
-        for data in results:
+      
+        for data in tqdm(executor.map(extract_data_for_url, urls), total=len(urls), desc="Processing URLs"):
             if data is not None:
                 all_data.append(data)
-
     return all_data
 
 def create_df(all_data):
