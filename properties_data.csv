@@ -1,0 +1,241 @@
+Price,Type_of_Sale,Locality,Type_of_Property,Subtype_of_Property,Number_of_Rooms,Living_Area,Fully_Equipped_Kitchen,Furnished,Open_fire,Terrace,Terrace_Area,Garden,Garden_Area,Surface_of_the_Land,Number_of_Facades,Swimming_Pool,State_of_the_Building
+185000.0,2,BORGERHOUT,APARTMENT,APARTMENT,3.0,98.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,GOOD
+185000.0,2,HOBOKEN,APARTMENT,APARTMENT,3.0,90.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,GOOD
+299000.0,2,NINOVE,APARTMENT,APARTMENT,3.0,153.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+395000.0,2,Ixelles,APARTMENT,APARTMENT,2.0,86.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",2.0,GOOD
+,2,Deinze,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent Sint-Denijs-Westrem,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Sint-Denijs-Westrem,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Anderlecht,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Brussels,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Molenbeek-Saint-Jean,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Sleidinge,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Evergem,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent Sint-Denijs-Westrem,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Destelbergen,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,La Hulpe,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+149000.0,2,BERCHEM,APARTMENT,APARTMENT,1.0,48.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+248000.0,2,ANTWERPEN,APARTMENT,APARTMENT,3.0,91.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+495000.0,2,Ixelles,APARTMENT,APARTMENT,3.0,136.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+264000.0,2,HOBOKEN,APARTMENT,APARTMENT,2.0,106.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+275000.0,2,Arlon,APARTMENT,APARTMENT,2.0,88.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,GOOD
+435000.0,2,Gent,APARTMENT,APARTMENT,1.0,67.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",,"(None,)",,GOOD
+725000.0,2,Schaerbeek,APARTMENT,PENTHOUSE,3.0,170.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(4,)",2.0,AS_NEW
+229000.0,2,HOBOKEN,APARTMENT,APARTMENT,3.0,100.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+470000.0,2,Uccle,APARTMENT,APARTMENT,3.0,179.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,GOOD
+480000.0,2,ANTWERPEN,APARTMENT,APARTMENT,2.0,116.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,JUST_RENOVATED
+89000.0,2,Jemeppe-sur-Sambre,HOUSE,HOUSE,2.0,74.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",79.0,"(2,)",,TO_BE_DONE_UP
+398000.0,2,WETTEREN,HOUSE,HOUSE,4.0,200.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",421.0,"(3,)",,
+150000.0,2,Courcelles,HOUSE,HOUSE,2.0,140.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",303.0,"(2,)",,GOOD
+169000.0,2,Anderlecht,APARTMENT,APARTMENT,1.0,60.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(4,)",,
+299000.0,2,ZARREN,HOUSE,HOUSE,3.0,200.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",284.0,"(None,)",,GOOD
+395000.0,2,HANNUT,HOUSE,MIXED_USE_BUILDING,4.0,320.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",649.0,"(None,)",,
+200000.0,2,TONGEREN,HOUSE,HOUSE,2.0,195.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",118.0,"(3,)",,JUST_RENOVATED
+439000.0,2,ANTWERPEN,APARTMENT,APARTMENT,3.0,150.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+399000.0,2,ANTWERPEN,APARTMENT,APARTMENT,3.0,138.0,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+299000.0,2,Chièvres,HOUSE,HOUSE,8.0,200.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",0.0,"(None,)",2.0,GOOD
+259000.0,2,Oostrozebeke,HOUSE,HOUSE,2.0,132.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",797.0,"(3,)",2.0,
+695000.0,2,Vilvoorde,APARTMENT,PENTHOUSE,3.0,365.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,
+134900.0,2,Brugge,APARTMENT,FLAT_STUDIO,0.0,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",2.0,JUST_RENOVATED
+220000.0,2,Waregem,APARTMENT,DUPLEX,1.0,65.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",2.0,
+149000.0,2,Brussels City,APARTMENT,APARTMENT,1.0,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",2.0,GOOD
+329000.0,2,Beyne-Heusay,HOUSE,HOUSE,5.0,250.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",878.0,"(3,)",2.0,TO_RENOVATE
+217500.0,2,DEURNE,APARTMENT,APARTMENT,2.0,90.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+115000.0,2,Liège,HOUSE,HOUSE,2.0,77.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",55.0,"(2,)",2.0,GOOD
+245000.0,2,Schaerbeek,APARTMENT,APARTMENT,2.0,84.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,TO_RENOVATE
+135000.0,2,Anderlues,HOUSE,HOUSE,4.0,210.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",0.0,"(2,)",2.0,TO_RENOVATE
+449000.0,2,Pepinster,HOUSE,BUNGALOW,4.0,140.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",1846.0,"(4,)",1.0,AS_NEW
+159000.0,2,Lontzen,APARTMENT,APARTMENT,2.0,98.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,
+319800.0,2,Aalst,APARTMENT,APARTMENT,2.0,105.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+357900.0,2,Aalst,APARTMENT,APARTMENT,2.0,122.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+65000.0,2,Gembloux,HOUSE,VILLA,2.0,130.0,True,,"(1,)",1.0,"(None,)","(1,)","(None,)",1214.0,"(4,)",2.0,AS_NEW
+550000.0,2,Huy,HOUSE,VILLA,5.0,295.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",1369.0,"(4,)",2.0,JUST_RENOVATED
+595000.0,2,Jette,APARTMENT,PENTHOUSE,3.0,175.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",2.0,AS_NEW
+775000.0,2,Arquennes,HOUSE,HOUSE,6.0,555.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",11900.0,"(4,)",2.0,TO_RENOVATE
+775000.0,2,Nivelles,HOUSE,HOUSE,6.0,555.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",11900.0,"(4,)",2.0,TO_RENOVATE
+415000.0,2,Gent,HOUSE,HOUSE,5.0,181.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",125.0,"(2,)",2.0,TO_BE_DONE_UP
+,2,Anderlecht,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,HÉLÉCINE,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Forest,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Chaumont-Gistoux,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Asse,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Knokke,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+695000.0,2,IXELLES,APARTMENT,APARTMENT,2.0,150.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,JUST_RENOVATED
+195000.0,2,GERAARDSBERGEN,APARTMENT,APARTMENT,2.0,130.0,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+205000.0,2,GERAARDSBERGEN,APARTMENT,APARTMENT,1.0,152.0,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+399000.0,2,ROOSDAAL,APARTMENT,APARTMENT,3.0,141.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,JUST_RENOVATED
+400000.0,2,GERAARDSBERGEN,APARTMENT,APARTMENT,3.0,252.0,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+315000.0,2,Anderlecht,APARTMENT,APARTMENT,3.0,120.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,AS_NEW
+249000.0,2,WOMMELGEM,APARTMENT,APARTMENT,3.0,99.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+,2,MONS,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,SAINT-SYMPHORIEN,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+249900.0,2,BOOM,APARTMENT,APARTMENT,2.0,125.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+219000.0,2,Borgerhout,APARTMENT,APARTMENT,2.0,92.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,GOOD
+299000.0,2,BERCHEM,APARTMENT,APARTMENT,3.0,147.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+399000.0,2,Astene,APARTMENT,APARTMENT,3.0,130.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+450000.0,2,Uccle,APARTMENT,GROUND_FLOOR,2.0,122.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",,"(3,)",2.0,GOOD
+159000.0,2,BERCHEM,APARTMENT,FLAT_STUDIO,0.0,41.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+235000.0,2,RONSE,APARTMENT,APARTMENT,2.0,103.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",,"(3,)",,GOOD
+265000.0,2,HOBOKEN,APARTMENT,APARTMENT,2.0,90.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+349000.0,2,Kortrijk,APARTMENT,APARTMENT,2.0,110.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+279000.0,2,Bredene,APARTMENT,APARTMENT,2.0,79.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+585000.0,2,Gent,APARTMENT,APARTMENT,2.0,94.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+,2,Oudenaarde,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent Sint-Denijs-Westrem,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+175000.0,2,INGELMUNSTER,APARTMENT,GROUND_FLOOR,1.0,85.0,False,,"(None,)",,"(None,)","(1,)","(None,)",,"(2,)",,GOOD
+220000.0,2,Lessines,HOUSE,MIXED_USE_BUILDING,3.0,210.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",955.0,"(2,)",2.0,TO_BE_DONE_UP
+175000.0,2,RAVELS,HOUSE,HOUSE,3.0,109.0,False,,"(None,)",,"(None,)","(None,)","(None,)",317.0,"(3,)",,
+1125000.0,2,Antwerpen,HOUSE,HOUSE,2.0,418.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",0.0,"(3,)",,
+435000.0,2,Grimbergen,HOUSE,HOUSE,4.0,291.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",392.0,"(3,)",,TO_RENOVATE
+495000.0,2,Dilbeek,HOUSE,TOWN_HOUSE,4.0,238.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",486.0,"(3,)",2.0,GOOD
+590000.0,2,Knokke-Heist,APARTMENT,APARTMENT,2.0,80.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+595000.0,2,Thimister-Clermont,HOUSE,EXCEPTIONAL_PROPERTY,4.0,240.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",5629.0,"(4,)",,AS_NEW
+437231.0,2,Veldegem,HOUSE,HOUSE,4.0,,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",389.0,"(3,)",,
+185000.0,2,Sambreville,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",531.0,"(3,)",,TO_BE_DONE_UP
+379500.0,2,Leuven Wilsele,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",1051.0,"(2,)",2.0,TO_BE_DONE_UP
+559500.0,2,Leuven Wilsele,HOUSE,HOUSE,4.0,294.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",354.0,"(2,)",2.0,GOOD
+79000.0,2,Quévy,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",340.0,"(2,)",2.0,TO_RENOVATE
+479000.0,2,Aalst,HOUSE,HOUSE,2.0,140.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",242.0,"(3,)",,
+299000.0,2,Aalst,APARTMENT,APARTMENT,2.0,95.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+299000.0,2,Erembodegem,APARTMENT,APARTMENT,2.0,95.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+275000.0,2,Aalst,HOUSE,APARTMENT_BLOCK,4.0,160.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",70.0,"(2,)",,GOOD
+194000.0,2,Ans,HOUSE,HOUSE,2.0,132.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",184.0,"(3,)",,GOOD
+590000.0,2,Knokke-Heist,APARTMENT,APARTMENT,2.0,80.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,GOOD
+475000.0,2,Middelkerke,HOUSE,VILLA,4.0,178.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",298.0,"(3,)",,GOOD
+99000.0,2,Middelkerke,APARTMENT,FLAT_STUDIO,0.0,39.0,True,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+199000.0,2,Liège,HOUSE,HOUSE,3.0,100.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",205.0,"(2,)",2.0,GOOD
+225000.0,2,Geel,APARTMENT,APARTMENT,1.0,,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Herzele,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+1840000.0,2,La Hulpe,APARTMENT,APARTMENT,3.0,255.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",2.0,AS_NEW
+,2,Liege,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+270280.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,92.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+286245.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,90.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+269000.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,91.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+690000.0,2,BELLEFONTAINE,HOUSE,EXCEPTIONAL_PROPERTY,4.0,300.0,True,,"(1,)",1.0,"(None,)","(1,)","(None,)",751.0,"(3,)",,JUST_RENOVATED
+330000.0,2,Chièvres,HOUSE,HOUSE,4.0,207.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",470.0,"(3,)",2.0,AS_NEW
+740000.0,2,WETTEREN,HOUSE,HOUSE,4.0,252.0,False,,"(1,)",1.0,"(None,)","(1,)","(None,)",1481.0,"(4,)",,TO_BE_DONE_UP
+,2,Waregem,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Geraardsbergen Moerbeke,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Overmere,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Herzele,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,NOORDERWIJK,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Gent,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+190000.0,2,IVOZ-RAMET,HOUSE,HOUSE,2.0,115.0,False,,"(1,)",1.0,"(None,)","(1,)","(None,)",2313.0,"(3,)",2.0,GOOD
+405000.0,2,LONGEAU,HOUSE,HOUSE,3.0,130.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",241.0,"(2,)",,GOOD
+379000.0,2,HARELBEKE,HOUSE,VILLA,3.0,175.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",606.0,"(4,)",,GOOD
+299000.0,2,Zottegem,HOUSE,HOUSE,2.0,123.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",170.0,"(2,)",2.0,AS_NEW
+329000.0,2,Gent,HOUSE,HOUSE,1.0,250.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",196.0,"(3,)",2.0,TO_RENOVATE
+363000.0,2,BOORTMEERBEEK,HOUSE,HOUSE,3.0,190.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",942.0,"(3,)",,TO_RENOVATE
+,2,Zulte Machelen,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+309900.0,2,DEURNE,HOUSE,HOUSE,3.0,120.0,False,,"(1,)",1.0,"(None,)","(1,)","(None,)",185.0,"(2,)",,TO_RENOVATE
+498000.0,2,SINT-DENIJS,HOUSE,COUNTRY_COTTAGE,2.0,170.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",852.0,"(3,)",,GOOD
+669900.0,2,WEMMEL,HOUSE,APARTMENT_BLOCK,6.0,220.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",268.0,"(2,)",,JUST_RENOVATED
+380000.0,2,RONSE,HOUSE,HOUSE,3.0,150.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",604.0,"(3,)",,GOOD
+199000.0,2,Liège,HOUSE,HOUSE,3.0,100.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",205.0,"(2,)",2.0,GOOD
+229000.0,2,Ronse,HOUSE,HOUSE,4.0,136.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",307.0,"(3,)",2.0,AS_NEW
+620000.0,2,Gent Mariakerke,HOUSE,HOUSE,4.0,265.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",629.0,"(3,)",2.0,GOOD
+164500.0,2,Kortrijk,HOUSE,HOUSE,3.0,120.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",94.0,"(2,)",,GOOD
+199000.0,2,Oosterzele,HOUSE,HOUSE,3.0,204.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",553.0,"(3,)",,TO_BE_DONE_UP
+215000.0,2,Sprimont,HOUSE,HOUSE,2.0,164.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",1300.0,"(3,)",2.0,GOOD
+359000.0,2,HOBOKEN,HOUSE,HOUSE,3.0,148.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",136.0,"(3,)",,AS_NEW
+275000.0,2,Oudenaarde,HOUSE,HOUSE,7.0,231.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",170.0,"(2,)",,GOOD
+299999.0,2,GERAARDSBERGEN,HOUSE,MIXED_USE_BUILDING,3.0,167.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",1050.0,"(2,)",,GOOD
+299999.0,2,GERAARDSBERGEN,HOUSE,HOUSE,3.0,167.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",1050.0,"(2,)",,GOOD
+595000.0,2,Uccle,HOUSE,HOUSE,4.0,171.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",110.0,"(2,)",2.0,GOOD
+199000.0,2,Liège,HOUSE,HOUSE,3.0,102.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",66.0,"(2,)",2.0,AS_NEW
+398000.0,2,WETTEREN,HOUSE,HOUSE,4.0,200.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",421.0,"(3,)",,
+150000.0,2,Courcelles,HOUSE,HOUSE,2.0,140.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",303.0,"(2,)",,GOOD
+169000.0,2,Anderlecht,APARTMENT,APARTMENT,1.0,60.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(4,)",,
+299000.0,2,ZARREN,HOUSE,HOUSE,3.0,200.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",284.0,"(None,)",,GOOD
+395000.0,2,HANNUT,HOUSE,MIXED_USE_BUILDING,4.0,320.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",649.0,"(None,)",,
+200000.0,2,TONGEREN,HOUSE,HOUSE,2.0,195.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",118.0,"(3,)",,JUST_RENOVATED
+439000.0,2,ANTWERPEN,APARTMENT,APARTMENT,3.0,150.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,GOOD
+399000.0,2,ANTWERPEN,APARTMENT,APARTMENT,3.0,138.0,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+299000.0,2,Chièvres,HOUSE,HOUSE,8.0,200.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",0.0,"(None,)",2.0,GOOD
+259000.0,2,Oostrozebeke,HOUSE,HOUSE,2.0,132.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",797.0,"(3,)",2.0,
+695000.0,2,Vilvoorde,APARTMENT,PENTHOUSE,3.0,365.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,
+134900.0,2,Brugge,APARTMENT,FLAT_STUDIO,0.0,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",2.0,JUST_RENOVATED
+220000.0,2,Waregem,APARTMENT,DUPLEX,1.0,65.0,False,2.0,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",2.0,
+149000.0,2,Brussels City,APARTMENT,APARTMENT,1.0,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",2.0,GOOD
+329000.0,2,Beyne-Heusay,HOUSE,HOUSE,5.0,250.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",878.0,"(3,)",2.0,TO_RENOVATE
+217500.0,2,DEURNE,APARTMENT,APARTMENT,2.0,90.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+115000.0,2,Liège,HOUSE,HOUSE,2.0,77.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",55.0,"(2,)",2.0,GOOD
+245000.0,2,Schaerbeek,APARTMENT,APARTMENT,2.0,84.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,TO_RENOVATE
+135000.0,2,Anderlues,HOUSE,HOUSE,4.0,210.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",0.0,"(2,)",2.0,TO_RENOVATE
+449000.0,2,Pepinster,HOUSE,BUNGALOW,4.0,140.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",1846.0,"(4,)",1.0,AS_NEW
+159000.0,2,Lontzen,APARTMENT,APARTMENT,2.0,98.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,
+319800.0,2,Aalst,APARTMENT,APARTMENT,2.0,105.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+357900.0,2,Aalst,APARTMENT,APARTMENT,2.0,122.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",,AS_NEW
+65000.0,2,Gembloux,HOUSE,VILLA,2.0,130.0,True,,"(1,)",1.0,"(None,)","(1,)","(None,)",1214.0,"(4,)",2.0,AS_NEW
+550000.0,2,Huy,HOUSE,VILLA,5.0,295.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",1369.0,"(4,)",2.0,JUST_RENOVATED
+595000.0,2,Jette,APARTMENT,PENTHOUSE,3.0,175.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",2.0,AS_NEW
+775000.0,2,Arquennes,HOUSE,HOUSE,6.0,555.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",11900.0,"(4,)",2.0,TO_RENOVATE
+775000.0,2,Nivelles,HOUSE,HOUSE,6.0,555.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",11900.0,"(4,)",2.0,TO_RENOVATE
+415000.0,2,Gent,HOUSE,HOUSE,5.0,181.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",125.0,"(2,)",2.0,TO_BE_DONE_UP
+220000.0,2,Lessines,HOUSE,MIXED_USE_BUILDING,3.0,210.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",955.0,"(2,)",2.0,TO_BE_DONE_UP
+265000.0,2,Flémalle,HOUSE,HOUSE,3.0,135.0,False,1.0,"(None,)",1.0,"(None,)","(1,)","(None,)",145.0,"(2,)",2.0,AS_NEW
+345000.0,2,Waterloo,HOUSE,HOUSE,3.0,137.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",488.0,"(3,)",2.0,TO_RENOVATE
+375000.0,2,Schaerbeek,HOUSE,APARTMENT_BLOCK,5.0,200.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",100.0,"(2,)",2.0,TO_BE_DONE_UP
+499000.0,2,HOUTAING,HOUSE,MANSION,5.0,321.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",891.0,"(4,)",1.0,GOOD
+695000.0,2,RONSE,HOUSE,MANSION,5.0,428.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",1919.0,"(4,)",,AS_NEW
+275000.0,2,Drongen,HOUSE,HOUSE,4.0,117.0,False,,"(None,)",,"(None,)","(1,)","(None,)",407.0,"(4,)",,TO_RENOVATE
+,2,Deinze,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Nazareth,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+299000.0,2,Oudenaarde,HOUSE,HOUSE,3.0,169.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",811.0,"(4,)",,TO_RENOVATE
+199000.0,2,Ledegem,HOUSE,HOUSE,4.0,350.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",272.0,"(2,)",,TO_RENOVATE
+229000.0,2,HARELBEKE,HOUSE,HOUSE,3.0,121.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",197.0,"(2,)",,JUST_RENOVATED
+455000.0,2,Oosterzele,HOUSE,HOUSE,3.0,147.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",217.0,"(3,)",2.0,JUST_RENOVATED
+180000.0,2,WAVRE,HOUSE,APARTMENT_BLOCK,0.0,78.0,False,1.0,"(1,)",1.0,"(None,)","(1,)","(None,)",100.0,"(2,)",2.0,JUST_RENOVATED
+289000.0,2,Saint-Nicolas,HOUSE,HOUSE,3.0,141.0,False,1.0,"(None,)",1.0,"(None,)","(1,)","(None,)",600.0,"(4,)",2.0,AS_NEW
+375000.0,2,Schaerbeek,HOUSE,HOUSE,5.0,200.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",100.0,"(2,)",2.0,TO_BE_DONE_UP
+369000.0,2,Antwerpen,HOUSE,HOUSE,5.0,228.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",100.0,"(2,)",,GOOD
+375000.0,2,De Pinte,HOUSE,HOUSE,3.0,149.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",361.0,"(None,)",,GOOD
+560000.0,2,OETINGEN,HOUSE,MIXED_USE_BUILDING,4.0,350.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",3270.0,"(3,)",,GOOD
+560000.0,2,OETINGEN,HOUSE,HOUSE,4.0,350.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",3270.0,"(3,)",,GOOD
+220000.0,2,Fléron Romsée,HOUSE,HOUSE,3.0,138.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",137.0,"(2,)",2.0,TO_BE_DONE_UP
+,2,De Haan,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Deinze Astene,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,De Haan,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,De Haan,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,De Haan,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,De Pinte,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+595000.0,2,Londerzeel,HOUSE,VILLA,4.0,226.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",2406.0,"(4,)",,AS_NEW
+595000.0,2,Gent,HOUSE,HOUSE,3.0,221.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",406.0,"(None,)",,TO_BE_DONE_UP
+650000.0,2,REBECQ-ROGNON,HOUSE,COUNTRY_COTTAGE,3.0,300.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",1315.0,"(4,)",,
+650000.0,2,STEENKERQUE,HOUSE,COUNTRY_COTTAGE,3.0,300.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",1315.0,"(4,)",,
+220000.0,2,Lessines,HOUSE,MIXED_USE_BUILDING,3.0,210.0,True,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",955.0,"(2,)",2.0,TO_BE_DONE_UP
+175000.0,2,RAVELS,HOUSE,HOUSE,3.0,109.0,False,,"(None,)",,"(None,)","(None,)","(None,)",317.0,"(3,)",,
+1125000.0,2,Antwerpen,HOUSE,HOUSE,2.0,418.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",0.0,"(3,)",,
+435000.0,2,Grimbergen,HOUSE,HOUSE,4.0,291.0,False,2.0,"(None,)",,"(None,)","(1,)","(None,)",392.0,"(3,)",,TO_RENOVATE
+495000.0,2,Dilbeek,HOUSE,TOWN_HOUSE,4.0,238.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",486.0,"(3,)",2.0,GOOD
+590000.0,2,Knokke-Heist,APARTMENT,APARTMENT,2.0,80.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+595000.0,2,Thimister-Clermont,HOUSE,EXCEPTIONAL_PROPERTY,4.0,240.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",5629.0,"(4,)",,AS_NEW
+437231.0,2,Veldegem,HOUSE,HOUSE,4.0,,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",389.0,"(3,)",,
+185000.0,2,Sambreville,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",531.0,"(3,)",,TO_BE_DONE_UP
+379500.0,2,Leuven Wilsele,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",1051.0,"(2,)",2.0,TO_BE_DONE_UP
+559500.0,2,Leuven Wilsele,HOUSE,HOUSE,4.0,294.0,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",354.0,"(2,)",2.0,GOOD
+79000.0,2,Quévy,HOUSE,HOUSE,3.0,119.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",340.0,"(2,)",2.0,TO_RENOVATE
+479000.0,2,Aalst,HOUSE,HOUSE,2.0,140.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",242.0,"(3,)",,
+299000.0,2,Aalst,APARTMENT,APARTMENT,2.0,95.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+299000.0,2,Erembodegem,APARTMENT,APARTMENT,2.0,95.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+275000.0,2,Aalst,HOUSE,APARTMENT_BLOCK,4.0,160.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",70.0,"(2,)",,GOOD
+194000.0,2,Ans,HOUSE,HOUSE,2.0,132.0,False,,"(None,)",1.0,"(None,)","(None,)","(None,)",184.0,"(3,)",,GOOD
+590000.0,2,Knokke-Heist,APARTMENT,APARTMENT,2.0,80.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",2.0,GOOD
+475000.0,2,Middelkerke,HOUSE,VILLA,4.0,178.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",298.0,"(3,)",,GOOD
+99000.0,2,Middelkerke,APARTMENT,FLAT_STUDIO,0.0,39.0,True,,"(None,)",,"(None,)","(None,)","(None,)",,"(2,)",,GOOD
+199000.0,2,Liège,HOUSE,HOUSE,3.0,100.0,False,2.0,"(None,)",1.0,"(None,)","(1,)","(None,)",205.0,"(2,)",2.0,GOOD
+225000.0,2,Geel,APARTMENT,APARTMENT,1.0,,False,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(None,)",,
+,2,Herzele,HOUSE_GROUP,HOUSE_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+1840000.0,2,La Hulpe,APARTMENT,APARTMENT,3.0,255.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(3,)",2.0,AS_NEW
+,2,Liege,APARTMENT_GROUP,APARTMENT_GROUP,,,False,,"(None,)",,"(None,)","(None,)","(None,)",,"(None,)",,
+270280.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,92.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+286245.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,90.0,True,2.0,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+269000.0,2,Heusden-Zolder,APARTMENT,APARTMENT,2.0,91.0,True,,"(None,)",1.0,"(None,)","(None,)","(None,)",,"(2,)",,AS_NEW
+690000.0,2,BELLEFONTAINE,HOUSE,EXCEPTIONAL_PROPERTY,4.0,300.0,True,,"(1,)",1.0,"(None,)","(1,)","(None,)",751.0,"(3,)",,JUST_RENOVATED
+330000.0,2,Chièvres,HOUSE,HOUSE,4.0,207.0,False,,"(None,)",1.0,"(None,)","(1,)","(None,)",470.0,"(3,)",2.0,AS_NEW

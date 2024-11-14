@@ -100,14 +100,20 @@ def extracted_multiple_data(urls):
 def create_df(all_data):
     data_properties = pd.DataFrame(all_data)
     data_properties.to_csv("properties_data.csv", index=False, encoding="utf-8")
-
+    return data_properties
 
 def main ():
-    df = pd.read_csv('properties_urls.csv', header=None)
+    urls = []  
+    with open('properties_urls.txt', 'r') as file:
+        for line in file:
+            line = line.strip()  
+            if line: 
+                urls.append(line)
 
-    # Extract URLs 
-    urls = df[0].tolist()  
+    property_data = extracted_multiple_data(urls)
 
-    property_data = extracted_mutiple_data(urls)
     data_properties_df = create_df(property_data)
     print(data_properties_df)
+
+if __name__ == "__main__":
+    main()
