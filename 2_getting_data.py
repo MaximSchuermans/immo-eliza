@@ -1,4 +1,5 @@
 import requests 
+from selenium import webdriver
 from bs4 import BeautifulSoup 
 from requests import Session
 import json 
@@ -18,7 +19,10 @@ def get_cookies():
 def get_script(url):
     with requests.Session() as session:
         response = session.get(url, cookies=get_cookies(), headers=headers)
-        soup = BeautifulSoup(response.content, 'html.parser')
+        driver = webdriver.Chrome()
+        driver.get(url)
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        #soup = BeautifulSoup(response.content, 'html.parser')
 
         try:
             scripts = soup.find_all('script', attrs={"type" :"text/javascript"})
@@ -102,7 +106,7 @@ def create_df(all_data):
     data_properties.to_csv("properties_data.csv", index=False, encoding="utf-8")
     return data_properties
 
-def main ():
+def main():
     urls = []  
     with open('properties_urls.txt', 'r') as file:
         for line in file:
@@ -110,7 +114,7 @@ def main ():
             if line: 
                 urls.append(line)
 
-    property_data = extracted_multiple_data(urls)
+    property_data = extracted_multiple_data(urls[:10])
 
     data_properties_df = create_df(property_data)
     print(data_properties_df)
