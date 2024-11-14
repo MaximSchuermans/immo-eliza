@@ -86,7 +86,7 @@ def main():
             all_links.extend(result)
     
     # Write URLs to CSV file
-    with open('url_links', 'w') as file:
+    with open('url_list', 'w') as file:
         for url in all_links:
             file.write(url + '\n')
 
