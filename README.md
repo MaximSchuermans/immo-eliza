@@ -1,6 +1,7 @@
 <h1 align="center"> Wikipedia Scraper </h1> <br>
 
-[BeCode](https://becode.org/) learning project. 
+<p align="center"> [BeCode](https://becode.org/) learning project. </p>
+<p align="center"> AI & Data science Bootcamp </p>
 
 <details>
   <summary>Table of Contents</summary>
@@ -19,10 +20,9 @@
 </details>
 
 ## **About The Project**
+This project is the first step towards creating a machine learning model to predict real estate prices in Belgium.
 
-This project is the first step towards creating a Machine Learning model to make price predictions on real estate sales in Belgium. 
-
-The actual task is gathering the data that will be used to train and test ML prediction model. Here we use [immoweb](immoweb.be) to collect inforation of more than 10.00 properties and create a dataset about the Belgian real estate market.  
+The initial task is to gather the data that will be used to train and test the machine learning model. We collect information from [Immoweb](immoweb.be) on over 10,000 properties to create a dataset about the Belgian real estate market.
 
 The dataset is stored as a `csv` with the following columns:
 * Locality
@@ -62,18 +62,25 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 
 ## **Installation**
+1. Clone the immo-eliza repository
+2. Install the required libraries by running pip install -r requirements.txt
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## **Usage**
 
 
 
 ## **Contributors**
+The project was made by a group of Junior AI & Data Scientists (in alphabetical order):
 Manel Boubakeur - https://github.com/ManelBouba
 Maxim Schuermans - https://github.com/MaximSchuermans
 Jessica Rojas - https://github.com/jessrojasal
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## **Timeline**
 12 Nov 2024 - project initiated 
 15 Nov 2024 - project concluded
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
