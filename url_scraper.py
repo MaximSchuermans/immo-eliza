@@ -46,7 +46,7 @@ def collect_urls(driver, root_url):
     # Store all urls of apartment in a list
     url_apartments_list = []
     
-    for n in range(1,10):
+    for n in range(1,334):
         endpoint = f"?countries=BE&page={n}&orderBy=relevance"
         url = root_url + endpoint
         
@@ -86,7 +86,7 @@ def main():
             all_links.extend(result)
     
     # Write URLs to CSV file
-    with open('url_file.txt', 'w') as file:
+    with open('url_links', 'w') as file:
         for url in all_links:
             file.write(url + '\n')
 
