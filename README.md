@@ -1,4 +1,4 @@
-<h1 align="center">Wikipedia Scraper</h1> <br>
+<h1 align="center">ImmoEliza: Data Scraper</h1> <br>
 <p align="center">
   <a href="https://becode.org/" target="_blank">BeCode</a> learning project.
 </p>
