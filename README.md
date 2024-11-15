@@ -51,16 +51,21 @@ The dataset is stored as a `csv` with the following columns:
 ### Built With
 List of frameworks/libraries used in this project.
 
-* [![concurrent.futures](https://img.shields.io/badge/concurrent.futures-Module-green)](https://docs.python.org/3/library/concurrent.futures.html)
-* [![selenium](https://img.shields.io/badge/Selenium-Automation-yellow)](https://selenium.dev/)
-* [![requests](https://img.shields.io/badge/Requests-HTTP-blue)](https://docs.python-requests.org/)
-* [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-HTML%20Parsing-brightgreen)](https://www.crummy.com/software/BeautifulSoup/)
-* [![json](https://img.shields.io/badge/JSON-Data-orange)](https://docs.python.org/3/library/json.html)
-* [![pandas](https://img.shields.io/badge/pandas-Dataframe-blue)](https://pandas.pydata.org/)
-* [![time](https://img.shields.io/badge/time-Time%20Functions-red)](https://docs.python.org/3/library/time.html)
+* [![selenium](https://img.shields.io/badge/Selenium-Automation-yellow)](https://selenium.dev/) 
+* [![selenium.webdriver.support.ui.WebDriverWait](https://img.shields.io/badge/WebDriverWait-Module-yellow)](https://selenium.dev/) 
+* [![selenium.webdriver.support.expected_conditions](https://img.shields.io/badge/expected_conditions-Module-yellow)](https://selenium.dev/)
+* [![selenium.webdriver.common.by.By](https://img.shields.io/badge/By-Module-yellow)](https://selenium.dev/) 
+* [![requests](https://img.shields.io/badge/Requests-HTTP-blue)](https://docs.python-requests.org/) 
+* [![requests.Session](https://img.shields.io/badge/requests.Session-HTTP%20Session-blue)](https://docs.python-requests.org/) 
+* [![threading](https://img.shields.io/badge/threading-Module-green)](https://docs.python.org/3/library/threading.html) 
+* [![concurrent.futures](https://img.shields.io/badge/concurrent.futures-Module-green)](https://docs.python.org/3/library/concurrent.futures.html) 
+* [![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-HTML%20Parsing-brightgreen)](https://www.crummy.com/software/BeautifulSoup/) 
+* [![json](https://img.shields.io/badge/JSON-Data-orange)](https://docs.python.org/3/library/json.html) 
+* [![pandas](https://img.shields.io/badge/pandas-Dataframe-blue)](https://pandas.pydata.org/) 
+* [![time](https://img.shields.io/badge/time-Time%20Functions-red)](https://docs.python.org/3/library/time.html) 
+* [![tqdm](https://img.shields.io/badge/tqdm-Progress%20Bar-blue)](https://tqdm.github.io/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## **Installation**
 1. Clone the immo-eliza repository
