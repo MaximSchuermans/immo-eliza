@@ -40,30 +40,25 @@ def get_script(url):
             pass
 
 def get_value(data, *keys):
-    """Function to extract values based on specified conditions."""
+    """Extract a nested value from a dictionary using a sequence of keys."""
     for key in keys:
         if isinstance(data, dict) and key in data:
             value = data[key]
-            if value is True:
-                data = 1  # If value is True, set data to 1
-            elif value is False:
-                data = 0  # If value is False, set data to 2
+            if isinstance(value, bool):  
+                data = int(value)  # True to 1, False to 0
             else:
-                try:
-                    data = value  # Try to convert value to an integer
-                except:
-                    data = value  # If conversion fails, return the original value
+                data = value  # Update data to key
         else:
-            return None  # Return None if key is missing
+            return None  # Return None if the key is missing
     return data
 
-def extracted_data(url, json_data):
+def extracted_data(json_data):
     """Creates a dictionary for each property by extracting the required values from json_data."""
     extracted_data = { }
 
     extracted_data["Price"] = get_value(json_data, "price", "mainValue")
-    extracted_data["Type_of_Sale"] = get_value(json_data, "flags", "isPublicSale") 
-    extracted_data["Type_of_Sale"] = get_value(json_data, "flags", "isNotarySale")
+    extracted_data["Type_of_Sale_Public"] = get_value(json_data, "flags", "isPublicSale") 
+    extracted_data["Type_of_Sale_Notary"] = get_value(json_data, "flags", "isNotarySale")
     extracted_data["Locality"] = get_value(json_data, "property", "location", "locality")
     extracted_data["Type_of_Property"] = get_value(json_data, "property", "type")
     extracted_data["Subtype_of_Property"] = get_value(json_data, "property", "subtype")
@@ -71,14 +66,14 @@ def extracted_data(url, json_data):
     extracted_data["Living_Area"] = get_value(json_data, "property", "netHabitableSurface")
     extracted_data["Fully_Equipped_Kitchen"] = get_value(json_data, "property", "kitchen", "type") == "HYPER_EQUIPPED"
     extracted_data["Furnished"] = get_value(json_data, "transaction","sale", "isFurnished")
-    extracted_data["Open_fire"] = get_value(json_data, "property", "fireplaceCount"),
+    extracted_data["Open_fire"] = get_value(json_data, "property", "fireplaceCount")
     extracted_data["Terrace"] = get_value(json_data, "property", "hasTerrace")
-    extracted_data["Terrace_Area"] = get_value(json_data, "property", "terraceSurface"),
-    extracted_data["Garden"] = get_value(json_data, "property", "hasGarden"),
-    extracted_data["Garden_Area"] = get_value(json_data, "property", "gardenSurface"),
-    extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "gardenSurface"),
-    extracted_data["Surface_area_plot_of_land"] = get_value(json_data, "property", "land", "surface"),
-    extracted_data["Number_of_Facades"] = get_value(json_data, "property", "building", "facadeCount"),
+    extracted_data["Terrace_Area"] = get_value(json_data, "property", "terraceSurface")
+    extracted_data["Garden"] = get_value(json_data, "property", "hasGarden")
+    extracted_data["Garden_Area"] = get_value(json_data, "property", "gardenSurface")
+    extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "gardenSurface")
+    extracted_data["Surface_area_plot_of_land"] = get_value(json_data, "property", "land", "surface")
+    extracted_data["Number_of_Facades"] = get_value(json_data, "property", "building", "facadeCount")
     extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")
     extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
 
@@ -88,7 +83,7 @@ def extract_data_for_url(url):
     """Extract data for a single UR."""
     json_data = get_script(url)
     if json_data:
-        return extracted_data(url, json_data)
+        return extracted_data(json_data)
     return None
 
 def extracted_multiple_data(urls):

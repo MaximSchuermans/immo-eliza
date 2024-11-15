@@ -85,6 +85,12 @@ The project's contributors (in alphabetical order):
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## **How We Work**
+* Parallel Work: During the first two days of the project, we worked individually—while helping each other—to find our own solutions for scraping the URLs. Then, we selected the best parts of each person’s code to create our unified URL and data scraper.
+* Testing: We tested both scrapers and identified areas for improvement.
+* Implementing Improvements: We addressed each improvement in separate branches. When someone resolved an issue, we merged the solution into the main branch.
+
+
 ## **Timeline**
 12 Nov 2024 - project initiated 
 15 Nov 2024 - project concluded
