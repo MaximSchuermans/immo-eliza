@@ -71,7 +71,7 @@ def collect_for_url(root_url):
 
 def remove_duplicates():
     """Remove duplicates from the file properties_urls.txt and overwrite it"""
-    with open('properties_urls.txt', 'r') as file:
+    with open('url_list.txt', 'r') as file:
         urls = file.readlines()
     
     initial_count = len(urls)
@@ -79,7 +79,7 @@ def remove_duplicates():
     final_count = len(unique_urls)
 
     # Overwrite file with unique URLs
-    with open('properties_urls.txt', 'w') as file:
+    with open('url_list', 'w') as file:
         for url in unique_urls:
             file.write(url + '\n')
 
@@ -103,7 +103,7 @@ def main():
             all_links.extend(result)
     
     # Write URLs to CSV file
-    with open('properties_urls.txt', 'w') as file:
+    with open('url_list.txt', 'w') as file:
         for url in all_links:
             file.write(url + '\n')
 
