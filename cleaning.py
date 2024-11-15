@@ -1,17 +1,18 @@
 import pandas as pd
 
 # Load your data
-df = pd.read_csv('immoweb_data_1.csv')  # replace with your file
+df = pd.read_csv('data/immoweb_data.csv')  # replace with your file
 
 # Remove rows where the 'price' column is NaN (empty)
 df_cleaned = df.dropna(subset=['Price'])
-
 
 
 # Step 1: Handle missing values
 # Replace tuples like `(None,)` with actual None/NaN values
 df.replace({"(None,)": None}, inplace=True)
 df.replace({"(1,)": 1}, inplace=True)
+# Replace NaN with "Missing Data" for all columns
+#df.fillna("-1", inplace=True)
 
 # Step 2: Convert boolean-like columns to consistent True/False
 boolean_columns = ['Fully_Equipped_Kitchen', 'Furnished', 'Open_fire', 'Swimming_Pool']
