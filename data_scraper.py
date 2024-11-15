@@ -76,7 +76,8 @@ def extracted_data(url, json_data):
     extracted_data["Terrace_Area"] = get_value(json_data, "property", "terraceSurface"),
     extracted_data["Garden"] = get_value(json_data, "property", "hasGarden"),
     extracted_data["Garden_Area"] = get_value(json_data, "property", "gardenSurface"),
-    extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "land", "surface")
+    extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "gardenSurface"),
+    extracted_data["Surface_area_plot_of_land"] = get_value(json_data, "property", "land", "surface"),
     extracted_data["Number_of_Facades"] = get_value(json_data, "property", "building", "facadeCount"),
     extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")
     extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
