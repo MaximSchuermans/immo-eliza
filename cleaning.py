@@ -1,16 +1,17 @@
 import pandas as pd
+import numpy as np
 
 # Load your data
 df = pd.read_csv('data/immoweb_data.csv')  # replace with your file
 
 # Remove rows where the 'price' column is NaN (empty)
-df_cleaned = df.dropna(subset=['Price'])
-
+df = df.dropna(subset=['Price'])
 
 # Step 1: Handle missing values
+
 # Replace tuples like `(None,)` with actual None/NaN values
-df.replace({"(None,)": None}, inplace=True)
-df.replace({"(1,)": 1}, inplace=True)
+#df.replace({"(None,)": None}, inplace=True)
+#df.replace({"(1,)": 1}, inplace=True)
 # Replace NaN with "Missing Data" for all columns
 #df.fillna("-1", inplace=True)
 
@@ -20,11 +21,13 @@ for col in boolean_columns:
     df[col] = df[col].replace({False: 0, True: 1}).fillna(0)  # Convert 0/1 to False/True, fill empty values with False
 
 # Step 3: Convert data types
-# Remove tuple formatting and convert to numeric for certain columns
-numeric_columns = ['Terrace_Area', 'Garden_Area', 'Surface_of_the_Land', 'Number_of_Facades']
-for col in numeric_columns:
-    # Remove tuples and convert to numeric
-    df[col] = df[col].astype(str).str.extract(r'(\d+)')[0].astype(float)
+columns_to_convert = ['Price', 'Number_of_Rooms', 'Living_Area', 'Furnished', 'Open_fire', 'Terrace', 'Terrace_Area', 'Garden_Area', 'Surface_of_the_Land', 'Surface_area_plot_of_land', 'Number_of_Facades', "Swimming_Pool"]  
+
+for col in columns_to_convert: 
+    #df[col] = df[col].astype(int)
+    #df[[col]].astype('int32')
+    #df[[col]] = df[[col]].apply(lambda x : int(x))
+    df[[col]] = df[[col]].map(lambda x: int(x), na_action='ignore')
 
 # Step 4: Standardize casing in text columns
 df['Locality'] = df['Locality'].str.title()
@@ -39,7 +42,7 @@ if 'Type_of_Sale' in df.columns:
 df.dropna(subset=['Price', 'Locality', 'Type_of_Property'], inplace=True)
 
 # Display cleaned DataFrame
-print(df.head())
+print(df.dtypes)
 
 # Optional: Save cleaned data to a new CSV file
 output_path = "data/cleaned_data.csv"
