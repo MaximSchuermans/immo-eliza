@@ -1,0 +1,7 @@
+pandas
+beautifulsoup4
+tqdm
+selenium
+requests
+
+
