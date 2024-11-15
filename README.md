@@ -74,8 +74,9 @@ List of frameworks/libraries used in this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## **Usage**
-
-
+1. To get the urls from the immoweb execute `python3 url_scraper.py`
+2. To get the data from the urls `python3 data_scraper.py`
+3. To clean the obtained data run `python3 cleaning.py`
 
 ## **Contributors**
 The project's contributors (in alphabetical order):
