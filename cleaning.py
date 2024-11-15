@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load your data
-df = pd.read_csv('properties_data.csv')  # replace with your file
+df = pd.read_csv('immoweb_data_1.csv')  # replace with your file
 
 # Remove rows where the 'price' column is NaN (empty)
 df_cleaned = df.dropna(subset=['Price'])
