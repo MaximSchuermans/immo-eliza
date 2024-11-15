@@ -98,13 +98,13 @@ def extracted_multiple_data(urls):
 def create_df(all_data):
     """Create a datframe with all data colleted"""
     data_properties = pd.DataFrame(all_data)
-    data_properties.to_csv("immoweb_data.csv", index=False, encoding="utf-8")
+    data_properties.to_csv("data/immoweb_data.csv", index=False, encoding="utf-8")
     return data_properties
 
 def main():
     start_time = time.time()
     urls = []  
-    with open('url_list.txt', 'r') as file:
+    with open('data/url_list.txt', 'r') as file:
         for line in file:
             line = line.strip()  
             if line: 
