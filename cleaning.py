@@ -42,6 +42,6 @@ df.dropna(subset=['Price', 'Locality', 'Type_of_Property'], inplace=True)
 print(df.head())
 
 # Optional: Save cleaned data to a new CSV file
-output_path = "cleaned_data.csv"
+output_path = "data/cleaned_data.csv"
 df.to_csv(output_path, index=False)
 print(f"Cleaned data saved to {output_path}")
