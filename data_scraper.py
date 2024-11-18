@@ -14,11 +14,13 @@ headers = {
 
 cookie_url = "https://www.immoweb.be"
 def get_cookies():
+    """Accept cookies"""
     req_cookies = requests.get(cookie_url, headers=headers)
     cookies = req_cookies.cookies
     return cookies
 
 def get_script(url):
+    """Get json dictionary from a single URL"""
     with requests.Session() as session:
         response = session.get(url, cookies=get_cookies(), headers=headers)
         #driver = webdriver.Chrome()
@@ -40,29 +42,34 @@ def get_script(url):
             pass
 
 def get_value(data, *keys):
-    """Extract a nested value from a dictionary using a sequence of keys."""
+    """Extract a nested value from a dictionary using a sequence of keys.
+       Returns None if the key or value is not found or if the value is None."""
     for key in keys:
         if isinstance(data, dict) and key in data:
             value = data[key]
-            if isinstance(value, bool):  
-                data = int(value)  # True to 1, False to 0
+            if value is None:  # Check if the value is None
+                return None
+            elif isinstance(value, bool):  # If it's a boolean, return 1 for True and 0 for False
+                return int(value)
             else:
-                data = value  # Update data to key
+                data = value  
         else:
-            return None  # Return None if the key is missing
-    return data
+            return None  # Return None if the key is not found
+    
+    return data  # Return the found value if it's not None
 
 def extracted_data(json_data):
-    """Creates a dictionary for each property by extracting the required values from json_data."""
+    """Creates a dictionary for each property by extracting the required values from json_data"""
     extracted_data = { }
 
     extracted_data["Price"] = get_value(json_data, "price", "mainValue")
-    extracted_data["Type_of_Sale_Public"] = get_value(json_data, "flags", "isPublicSale") 
-    extracted_data["Type_of_Sale_Notary"] = get_value(json_data, "flags", "isNotarySale")
-    extracted_data["Locality"] = get_value(json_data, "property", "location", "locality")
+    #extracted_data["Type_of_Sale_isPubli"] = get_value(json_data, "flags", "isPublicSale") 
+    #extracted_data["Type_of_Sale_isNotary"] = get_value(json_data, "flags", "isNotarySale")     
+    extracted_data["Locality"] = get_value(json_data, "property", "location", "postalCode")
     extracted_data["Type_of_Property"] = get_value(json_data, "property", "type")
     extracted_data["Subtype_of_Property"] = get_value(json_data, "property", "subtype")
-    extracted_data["Number_of_Rooms"] = get_value(json_data, "property", "bedroomCount")
+    extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
+    extracted_data["Number_of_Rooms"] = get_value(json_data, "property", "bedroomCount") 
     extracted_data["Living_Area"] = get_value(json_data, "property", "netHabitableSurface")
     extracted_data["Fully_Equipped_Kitchen"] = get_value(json_data, "property", "kitchen", "type") == "HYPER_EQUIPPED"
     extracted_data["Furnished"] = get_value(json_data, "transaction","sale", "isFurnished")
@@ -74,9 +81,11 @@ def extracted_data(json_data):
     extracted_data["Surface_of_the_Land"] = get_value(json_data, "property", "gardenSurface")
     extracted_data["Surface_area_plot_of_land"] = get_value(json_data, "property", "land", "surface")
     extracted_data["Number_of_Facades"] = get_value(json_data, "property", "building", "facadeCount")
-    extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")
-    extracted_data["State_of_the_Building"] = get_value(json_data, "property", "building", "condition")
+    extracted_data["Swimming_Pool"] = get_value(json_data, "property", "hasSwimmingPool")    
 
+    extracted_data["Disabled_Access"] = get_value(json_data, "property", "hasDisabledAccess") 
+    extracted_data["Lift"] = get_value(json_data, "property", "hasLift") 
+    
     return extracted_data 
 
 def extract_data_for_url(url):
