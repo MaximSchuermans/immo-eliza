@@ -30,7 +30,6 @@ The dataset is stored as a `csv` with the following columns:
 * Type of property (House/apartment)
 * Subtype of property (Bungalow, Chalet, Mansion, ...)
 * Price
-* Type of sale (Exclusion of life sales)
 * Number of rooms
 * Living Area
 * Fully equipped kitchen (Yes/No)
@@ -45,6 +44,10 @@ The dataset is stored as a `csv` with the following columns:
 * Number of facades
 * Swimming pool (Yes/No)
 * State of the building (New, to be renovated, ...)
+
+### Additional Notes
+* The Type of Sale tag consistently returned only false values, so this column was not included in the dataset.
+* We added two additional columns, Disabled Access and Lift, as they are of particular interest for further analysis.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
